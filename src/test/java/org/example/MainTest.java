@@ -105,4 +105,18 @@ public class MainTest {
         // Assert
         assertEquals(resultadoEsperado, resultado);
     }
+    @Test
+    public void testDivisaoFail() {
+        // Arrange
+        double numero1 = 10;
+        double numero2 = 5;
+        int operacao = 3;
+        String resultadoNaoEsperado = "O resultado de 10,0 / 5,0 = 3,0";
+
+        // Act
+        String resultado = Main.calcular(numero1, numero2, operacao);
+
+        // Assert
+        assertNotEquals(resultadoNaoEsperado, resultado);
+    }
 }
