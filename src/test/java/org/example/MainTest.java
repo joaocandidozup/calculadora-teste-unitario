@@ -36,7 +36,7 @@ public class MainTest {
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
     @Test
-    public void testSubtracao() {
+    public void testSubtracaoSucess() {
         // Arrange
         double numero1 = 10;
         double numero2 = 5;
