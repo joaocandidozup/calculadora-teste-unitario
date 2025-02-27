@@ -203,4 +203,22 @@ public class MainTest {
         // Assert
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
+    @Test
+    public void testMenu() {
+        // Arrange
+        String resultadoEsperado = """
+                \nOperações:
+                1 - Soma
+                2 - Subtração
+                3 - Multiplicação
+                4 - Divisão
+                0 - Sair
+                """;
+
+        // Act
+        String resultado = Main.menu();
+
+        // Assert
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
