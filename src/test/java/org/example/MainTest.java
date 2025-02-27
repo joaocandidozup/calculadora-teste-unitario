@@ -35,4 +35,19 @@ public class MainTest {
         // Assert
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
+    @Test
+    public void testSubtracao() {
+        // Arrange
+        double numero1 = 10;
+        double numero2 = 5;
+        int operacao = 2;
+        String resultadoEsperado = "O resultado de 10,0 - 5,0 = 5,0";
+
+        // Act
+        String resultado = Main.calcular(numero1, numero2, operacao);
+
+        // Assert
+        assertEquals(resultadoEsperado, resultado);
+    }
+
 }
