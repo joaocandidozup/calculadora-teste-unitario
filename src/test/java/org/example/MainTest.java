@@ -133,4 +133,18 @@ public class MainTest {
         // Assert
         assertEquals(resultadoEsperado, resultado);
     }
+    @Test
+    public void testDivisaoPorZeroFail() {
+        // Arrange
+        double numero1 = 10;
+        double numero2 = 0;
+        int operacao = 4;
+        String resultadoNaoEsperado = "O resultado de 10,0 / 0,0 é uma operacao valida";
+
+        // Act
+        String resultado = Main.calcular(numero1, numero2, operacao);
+
+        // Assert
+        assertNotEquals(resultadoNaoEsperado, resultado);
+    }
 }
