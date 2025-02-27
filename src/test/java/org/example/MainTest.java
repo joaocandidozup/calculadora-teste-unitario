@@ -175,4 +175,18 @@ public class MainTest {
         // Assert
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
+    @Test
+    public void testSairDaAplicacaoSucess() {
+        // Arrange
+        double numero1 = 10;
+        double numero2 = 0;
+        int operacao = 0;
+        String resultadoEsperado = "OK SAINDO DA APLICAÇÃO ................";
+
+        // Act
+        String resultado = Main.calcular(numero1, numero2, operacao);
+
+        // Assert
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
