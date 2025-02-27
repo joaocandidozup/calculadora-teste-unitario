@@ -147,4 +147,18 @@ public class MainTest {
         // Assert
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
+    @Test
+    public void testOperacaoInvalida() {
+        // Arrange
+        double numero1 = 10;
+        double numero2 = 0;
+        int operacao = 9;
+        String resultadoEsperado = "Operação inválida!!!";
+
+        // Act
+        String resultado = Main.calcular(numero1, numero2, operacao);
+
+        // Assert
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
