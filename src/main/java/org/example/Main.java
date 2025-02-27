@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("########## Calculadora do João ##########");
+        System.out.println(nomeDaAplicacao());
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("Digite o primeiro número: ");
@@ -55,6 +55,10 @@ public class Main {
                 0 - Sair
                 """;
         return menu;
+    }
+    public static String nomeDaAplicacao(){
+        String nome = "########## Calculadora do João ##########";
+        return nome;
     }
 
 }
