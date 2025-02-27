@@ -92,7 +92,7 @@ public class MainTest {
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
     @Test
-    public void testDivisao() {
+    public void testDivisaoSucess() {
         // Arrange
         double numero1 = 10;
         double numero2 = 5;
@@ -120,7 +120,7 @@ public class MainTest {
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
     @Test
-    public void testDivisaoPorZero() {
+    public void testDivisaoPorZeroSucess() {
         // Arrange
         double numero1 = 10;
         double numero2 = 0;
@@ -148,7 +148,7 @@ public class MainTest {
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
     @Test
-    public void testOperacaoInvalida() {
+    public void testOperacaoInvalidaSucess() {
         // Arrange
         double numero1 = 10;
         double numero2 = 0;
@@ -204,7 +204,7 @@ public class MainTest {
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
     @Test
-    public void testMenu() {
+    public void testMenuSucess() {
         // Arrange
         String resultadoEsperado = """
                 \nOperações:
@@ -250,5 +250,16 @@ public class MainTest {
 
         // Assert
         assertEquals(resultadoEsperado, resultado);
+    }
+    @Test
+    public void nomeDaAplicacaoFail() {
+        // Arrange
+        String resultadoNaoEsperado = "########## Calculadora  ##########";
+
+        // Act
+        String resultado = Main.nomeDaAplicacao();
+
+        // Assert
+        assertNotEquals(resultadoNaoEsperado, resultado);
     }
 }
