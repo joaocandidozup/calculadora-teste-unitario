@@ -119,4 +119,18 @@ public class MainTest {
         // Assert
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
+    @Test
+    public void testDivisaoPorZero() {
+        // Arrange
+        double numero1 = 10;
+        double numero2 = 0;
+        int operacao = 4;
+        String resultadoEsperado = "O resultado de 10,0 / 0,0 é uma operação matemática indefinida!!!";
+
+        // Act
+        String resultado = Main.calcular(numero1, numero2, operacao);
+
+        // Assert
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
