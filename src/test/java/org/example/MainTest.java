@@ -240,4 +240,15 @@ public class MainTest {
         // Assert
         assertNotEquals(resultadoNaoEsperado, resultado);
     }
+    @Test
+    public void nomeDaAplicacaoSucess() {
+        // Arrange
+        String resultadoEsperado = "########## Calculadora do João ##########";
+
+        // Act
+        String resultado = Main.nomeDaAplicacao();
+
+        // Assert
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
